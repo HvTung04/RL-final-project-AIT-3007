@@ -27,15 +27,9 @@ Our agent's performance will be evaluated based on reward and win rate against e
   <strong>Against Final Agent</strong>
 </p>
 
-To recreate these demo see `eval/pre` 
+To recreate these demo see `eval/main.py` which load provided pre-trained policies using `self_trained_agent.py` containing wrappers for each of the agents.
 
-Update: The final ~~stronger~~ agent is released, this agent is trained on selfplay in about 15 minutes using DQN. See the below video
-
-<p align="center">
-<img src="assets/blueselfplay.gif" width="300" alt="selfplay blue vs random" />
-  <img src="assets/redselfplay.gif" width="300" alt="selfplay combat" />
-</p>
-In the above demo, the left side shows the blue agent competing against random red agents, while the right side displays a battle between two self-play agents. Blue agents can comfortably defeat random agents, showing their cabability toward untrained agents, but they struggle with the red ones, which are intentionally trained more, so that they can dominate blue ones. As before, you should evaluate your agents against the red agents.
+Our reported agent was trained using Deep Q-Network with Double Q and Prioritized Replay Buffer using PyTorch, the implementation can be found at `solution/DeepQNetwork/Double Q`. This training script was executed on Google Colab.
 
 ## Installation
 clone this repo and install with
@@ -43,11 +37,8 @@ clone this repo and install with
 pip install -r requirements.txt
 ```
 
-## Demos
-See `main.py` for a starter code.
-
 ## Evaluation
-Refer to `eval.py` for the evaluation code, you might want to modify it with your specific codebase.
+Refer to `eval/eval.py` for the evaluation code, this code also loads wrappers of our trained agents from `self_trained_agent.py`.
 
 ## References
 
