@@ -1,21 +1,33 @@
 # MAgent2 RL Final Project
 ## Overview
-In this final project, you will develop and train a reinforcement learning (RL) agent using the MAgent2 platform. The task is to solve a specified MAgent2 environment `battle`, and your trained agent will be evaluated on all following three types of opponents:
+In this final project, we will develop and train a reinforcement learning (RL) agent using the MAgent2 platform. The task is to solve a specified MAgent2 environment `battle`, and our trained agent will be evaluated on all following three types of opponents:
 
 1. Random Agents: Agents that take random actions in the environment.
 2. A Pretrained Agent: A pretrained agent provided in the repository.
 3. A Final Agent: A stronger pretrained agent, which will be released in the final week of the course before the deadline.
 
-Your agent's performance should be evaluated based on reward and win rate against each of these models. You should control *blue* agents when evaluating.
+Our agent's performance will be evaluated based on reward and win rate against each of these models. We control "blue" agent while evaluating.
 
 
 <p align="center">
-  <img src="assets/random.gif" width="300" alt="random agent" />
-  <img src="assets/pretrained.gif" width="300" alt="pretrained agent" />
+  <img src="assets/random demo.gif" width="300" alt="random agent" />
+  <br>
+  <strong>Against Random Agent</strong>
 </p>
 
-See `video` folder for a demo of how each type of opponent behaves.
-Checkout a [Colab notebook](https://colab.research.google.com/drive/1qmx_NCmzPlc-atWqexn2WueqMKB_ZTxc?usp=sharing) for running this demo.
+<p align="center">
+  <img src="assets/pretrained demo.gif" width="300" alt="pretrained agent" />
+  <br>
+  <strong>Against Pretrained Agent</strong>
+</p>
+
+<p align="center">
+  <img src="assets/final demo.gif" width="300" alt="final agent" />
+  <br>
+  <strong>Against Final Agent</strong>
+</p>
+
+To recreate these demo see `eval/pre` 
 
 Update: The final ~~stronger~~ agent is released, this agent is trained on selfplay in about 15 minutes using DQN. See the below video
 
