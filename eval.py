@@ -1,6 +1,7 @@
 from magent2.environments import battle_v4
 from torch_model import QNetwork
 from final_torch_model import QNetwork as FinalQNetwork
+from self_trained_agent import DoubleQPolicy, DuelingQPolicy
 import torch
 import numpy as np
 
@@ -17,6 +18,10 @@ def eval():
 
     def random_policy(env, agent, obs):
         return env.action_space(agent).sample()
+    
+    trained_blue = DoubleQPolicy("solution\DeepQNetwork\Double Q\\trained_pth\\blue_deepQ.pth")
+    def blue_policy(env, agent, obs):
+        return trained_blue.get_action(torch.tensor(obs))
 
     q_network = QNetwork(
         env.observation_space("red_0").shape, env.action_space("red_0").n
@@ -101,7 +106,7 @@ def eval():
     print("Eval with random policy")
     print(
         run_eval(
-            env=env, red_policy=random_policy, blue_policy=random_policy, n_episode=30
+            env=env, red_policy=random_policy, blue_policy=blue_policy, n_episode=30
         )
     )
     print("=" * 20)
@@ -109,7 +114,7 @@ def eval():
     print("Eval with trained policy")
     print(
         run_eval(
-            env=env, red_policy=pretrain_policy, blue_policy=random_policy, n_episode=30
+            env=env, red_policy=pretrain_policy, blue_policy=blue_policy, n_episode=30
         )
     )
     print("=" * 20)
@@ -119,7 +124,7 @@ def eval():
         run_eval(
             env=env,
             red_policy=final_pretrain_policy,
-            blue_policy=random_policy,
+            blue_policy=blue_policy,
             n_episode=30,
         )
     )
