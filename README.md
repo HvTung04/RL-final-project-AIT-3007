@@ -27,7 +27,7 @@ Our agent's performance will be evaluated based on reward and win rate against e
   <strong>Against Final Agent</strong>
 </p>
 
-To recreate these demo see `eval/main.py` which load provided pre-trained policies using `self_trained_agent.py` containing wrappers for each of the agents.
+To recreate these demo see `eval/main.py` which load provided pre-trained policies using `pretrained_agent.py` containing wrappers for each of the agents.
 
 Our reported agent was trained using Deep Q-Network with Double Q and Prioritized Replay Buffer using PyTorch, the implementation can be found at `solution/DeepQNetwork/Double Q`. This training script was executed on Google Colab.
 
