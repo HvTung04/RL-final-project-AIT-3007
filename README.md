@@ -29,7 +29,7 @@ Our agent's performance will be evaluated based on reward and win rate against e
 
 To recreate these demo see `eval/main.py` which load provided pre-trained policies using `pretrained_agent.py` containing wrappers for each of the agents.
 
-Our reported agent was trained using Deep Q-Network with Double Q and Prioritized Replay Buffer using PyTorch, the implementation can be found at `solution/DeepQNetwork/Double Q`. This training script was executed on Google Colab.
+Our reported agent was trained using Deep Q-Network with Double Q and Prioritized Replay Buffer using PyTorch, the implementation can be found at `solution/DeepQNetwork/Double Q`. This training script was executed on Kaggle with Accelerator setting of GPU T4 x2.
 
 ## Installation
 clone this repo and install with
