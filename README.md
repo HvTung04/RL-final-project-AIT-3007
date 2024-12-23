@@ -1,3 +1,5 @@
+> **Note:** Dear Mr.Cường and anh Giang, our reported agent was trained with tuned settings, the script is located at `solution/DeepQNetwork/Double Q/DoubleQNetwork-tuned.ipynb`. The default settings mentioned in our report was a mistake, we are really sorry. Our updated report is also updated to this repo. 
+
 # MAgent2 RL Final Project
 ## Overview
 In this final project, we will develop and train a reinforcement learning (RL) agent using the MAgent2 platform. The task is to solve a specified MAgent2 environment `battle`, and our trained agent will be evaluated on all following three types of opponents:
