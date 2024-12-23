@@ -19,7 +19,7 @@ def eval():
     def random_policy(env, agent, obs):
         return env.action_space(agent).sample()
     
-    trained_blue = DoubleQPolicy("solution\DeepQNetwork\Double Q\\trained_pth\\blue_deepQ.pth")
+    trained_blue = DoubleQPolicy("solution\DeepQNetwork\Double Q\\trained_pth\\blue_doubleQ_default.pth")
     def blue_policy(env, agent, obs):
         return trained_blue.get_action(torch.tensor(obs))
 
